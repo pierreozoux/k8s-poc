@@ -62,7 +62,7 @@ volumes:[
         // build and publish container
 
         println "Running Docker build/publish: ${imageTag}"
-        docker.withRegistry("https://" + ecr, "ecr:us-east-1:ecr") {
+        docker.withRegistry("https://" + ecr, "ecr:us-east-1:ecr-user") {
           def img = docker.image imageTag
           sh "docker build -t ${imageTag}  ."
           img.push()
