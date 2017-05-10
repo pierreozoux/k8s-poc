@@ -1,0 +1,10 @@
+# Default values for alchemy.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+image:
+  repo: 405610825889.dkr.ecr.us-east-1.amazonaws.com/nginx-poc
+  tag: latest
+# alchemy:
+  # secretKeyBase:
+  # secretToken:
+host: poc.k8s.thredtest.com
