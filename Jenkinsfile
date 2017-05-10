@@ -80,7 +80,7 @@ volumes:[
           // Deploy using Helm chart
           sh "helm dep build ${chart_dir}"
           println "Running deployment"
-          sh "helm upgrade --install ${app} ${chart_dir} --set tag=${env.GIT_COMMIT_ID},host=poc.k8s.thredtest.com --namespace=${app}"
+          sh "helm upgrade --install ${app} ${chart_dir} --set image.tag=${env.GIT_COMMIT_ID},host=poc.k8s.thredtest.com --namespace=${app}"
           echo "Application ${app} successfully deployed. Use helm status ${app} to check"
         }
       }
