@@ -71,7 +71,7 @@ volumes:[
     }
 
     // deploy only the master branch
-    if (env.BRANCH_NAME == 'k8s') {
+    if (env.BRANCH_NAME == 'master') {
       stage ('deploy to k8s') {
         container('helm') {
           //configure helm client and confirm tiller process is installed
